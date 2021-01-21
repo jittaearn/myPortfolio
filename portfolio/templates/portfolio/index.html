@@ -1,0 +1,57 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/index.css' %}">
+    <div class="container p-4">
+        <div class="col pt-3">
+            <div class="row">
+            <h1>Jitta Koopratoomsiri</h1>
+            </div>
+            <div class="row mt-2">
+                <div class="col-7 m-3">
+                    <h3>SOFTWARE DEVELOPER</h3>
+                    <p style="padding-top: 1rem"> 
+                    Hello, my name is Earn. Currently, a third-year Software & Knowledge Engineering student 
+                    at Kasetsart University. I am interested in software development, and I enjoyed working on 
+                    FrontEnd development. Nevertheless, I am eager to work more on BackEnd development and data analysis.
+                    </p>
+                    <div class="row mt-1">
+                        <div class="col">
+                            <h4>PROGRAMMING LANGUAGES</h4>
+                            <h5>Python, JavaScript</h5>  
+                        </div>
+                        <div class="col">
+                            <h4>WEBSITE DEVELOPMENT</h4>
+                            <h5>HTML, CSS, PYTHON DJANGO</h5>  
+                        </div>
+                        <div class="col">
+                            <h4></h4>
+                            <h4>DATABASE</h4>
+                            <h5>SQL Queries</h5>  
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col">
+                            <h4>Soft Skills</h4>
+                            <h5>Motivated, Adaptive, Team-player </h5>    
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <h4>LANGUAGES</h4>
+                                <div class="col">
+                                    <h5>Thai Native</h5>
+                                </div> 
+                                <div class="col">
+                                    <h5>English Proficient</h5>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m-3">
+                    <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture">
+                </div>
+            </div>   
+        </div>
+    </div>
+    {% endblock %}

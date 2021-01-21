@@ -1,0 +1,22 @@
+h1  {
+    color:#ec5136;
+    font-size: 4rem;
+}
+
+h4 {
+    color:#21cdb3;
+    font-size: 1.5rem;
+}
+
+h5 {
+    color:#50595b;;
+    font-size: 1rem;
+}
+
+.contact {
+    border-color: #fadc34; 
+    border-style: dashed;
+    border-radius: 5%; 
+    padding-left:1rem; 
+    padding: 2rem;
+}
