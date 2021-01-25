@@ -27,15 +27,13 @@
             </div> 
             <div class="col">
                 <div class="container">
-                    <form>
-                        <form method="POST">
-                        <fieldset>
-                            <legend>Tell me what you think about this portfolio application</legend>
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </fieldset>
-                        </form>
+                    <form method="POST">
+                    <fieldset>
+                        <legend>Tell me what you think about this portfolio application!!</legend>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="sumbit btn btn-dark">Submit</button>
+                    </fieldset>
                     </form>
                 </div>
             </div>

@@ -54,29 +54,10 @@ class ExtraCurriculumView(generic.ListView):
 class ContactView(FormView):
     template_name = 'portfolio/contact.html'
     form_class = CommentForm
-    success_url = 'portfolio/thanks.html'
-
-    def form_valid(self, form):
-        form.save()
-        return super(ThanksView, self).form_valid(form)
-
-class ThanksView(generic.ListView):
-    template_name = 'portfolio/thanks.html'
-    model = Comment
-    def get_queryset(self):
-        """
-        Return the last five published comments (not including those set to be
-        published in the future).
-        """
-        return Comment
-
-# class ContactView(FormView):
-#     template_name = 'portfolio/contact.html'
-#     form_class = CommentForm
-#     success_url = '/thanks/'
-
-#     def form_valid(self, form):
-#         # This method is called when valid form data has been POSTed.
-#         # It should return an HttpResponse.
-#         form.send_email()
-#         return super().form_valid(form)
+        
+    def post(self, request, *args, **kwargs):
+        print("Post") 
+        form = self.form_class(request.POST) 
+        if form.is_valid():
+            form.save()
+            return render(request, 'portfolio/thanks.html', {'form': form})

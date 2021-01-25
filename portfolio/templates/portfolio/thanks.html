@@ -1,1 +1,18 @@
-<h1>Thank you for your comments</h1>
+{% extends "portfolio/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/contact.css' %}">
+
+<div class="container p-4">
+    <div class="col pt-3">
+        <div class="row">
+            <h1>Thank you for your comment</h1>
+            <div class="col pt-3">
+            <button type="button" class="btn btn-dark">
+                <a class="nav-link" href="{% url 'portfolio:index' %}">Return to Home Page</a>
+            </button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
