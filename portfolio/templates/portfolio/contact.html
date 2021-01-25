@@ -1,35 +1,46 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/contact.css' %}">
 
-    <link rel="stylesheet" href="{% static 'portfolio/contact.css' %}">
-
-    <div class="container p-4">
-        <div class="col pt-3">
-            <div class="row">
-            <h1>Contact Me</h1>
-            </div>
-            <div class="row mt-2">
-                <div class="contact col-3 m-3">
-                    <h4>Phone Number</h4>
-                    <h5>(+66)626291556</h5>  
-
-                    <h4 style="margin-top:1rem">Email</h4>
-                    <h5>jitta.k@ku.th</h5>  
-
-                    <h4 style="margin-top:1rem">Github ID</h4>
-                    <h5>github.com/jittaearn </h5>  
-
-                    <h4 style="margin-top:1rem">Address</h4>
-                    <h5>
-                        37 BB Apartment PHAHOLYOTHIN
-                        24 KWANG JOMPOL KHET JATUCHAK BANGKOK 10900 THAILAND
-                    </h5> 
-                </div> 
-                <div class="col-3 m-3">
-                    <h1 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color:Black; margin-top:2rem">Leave a comment below</h1>
-                </div>
-            </div>  
+<div class="container p-4">
+    <div class="col pt-3">
+        <div class="row">
+        <h1>Contact Me</h1>
         </div>
+        <div class="row mt-2">
+            <div class="contact col-3 m-3">
+                <h4>Phone Number</h4>
+                <h5>(+66)626291556</h5>  
+
+                <h4 style="margin-top:1rem">Email</h4>
+                <h5>jitta.k@ku.th</h5>  
+
+                <h4 style="margin-top:1rem">Github ID</h4>
+                <h5>github.com/jittaearn </h5>  
+
+                <h4 style="margin-top:1rem">Address</h4>
+                <h5>
+                    37 BB Apartment PHAHOLYOTHIN
+                    24 KWANG JOMPOL KHET JATUCHAK BANGKOK 10900 THAILAND
+                </h5> 
+            </div> 
+            <div class="col">
+                <h3>Tell me what you think about this portfolio application</h3><br>
+                <div class="container">
+                    <form>
+                        <form method="POST">
+                        <fieldset>
+                            <legend>Form</legend>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </fieldset>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>  
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
