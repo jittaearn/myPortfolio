@@ -51,6 +51,18 @@ class ExtraCurriculumView(generic.ListView):
         """
         return Comment
 
+class ContactView(FormView):
+    template_name = 'portfolio/contact.html'
+    form_class = CommentForm
+    success_url = 'portfolio/thanks.html'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.save()
+        return super().form_valid(form)
+
+
 # def get_form(request):
 #     # if this is a POST request we need to process the form data
 #     if request.method == 'POST':
@@ -70,13 +82,13 @@ class ExtraCurriculumView(generic.ListView):
 #     return render(request, 'form.html', {'form': form})
 
 
-class ContactView(FormView):
-    template_name = 'portfolio/contact.html'
-    form_class = CommentForm
-    success_url = '/thanks/'
+# class ContactView(FormView):
+#     template_name = 'portfolio/contact.html'
+#     form_class = CommentForm
+#     success_url = '/thanks/'
 
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         # This method is called when valid form data has been POSTed.
+#         # It should return an HttpResponse.
+#         form.send_email()
+#         return super().form_valid(form)

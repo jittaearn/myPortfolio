@@ -26,12 +26,11 @@
                 </h5> 
             </div> 
             <div class="col">
-                <h3>Tell me what you think about this portfolio application</h3><br>
                 <div class="container">
                     <form>
                         <form method="POST">
                         <fieldset>
-                            <legend>Form</legend>
+                            <legend>Tell me what you think about this portfolio application</legend>
                             {% csrf_token %}
                             {{ form.as_p }}
                             <button type="submit" class="btn btn-primary">Submit</button>

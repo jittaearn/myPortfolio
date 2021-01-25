@@ -27,3 +27,7 @@ h5 {
     padding-left:1rem; 
     padding: 2rem;
 }
+
+form {
+    display: inline;
+}
