@@ -57,30 +57,18 @@ class ContactView(FormView):
     success_url = 'portfolio/thanks.html'
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
         form.save()
-        return super().form_valid(form)
+        return super(ThanksView, self).form_valid(form)
 
-
-# def get_form(request):
-#     # if this is a POST request we need to process the form data
-#     if request.method == 'POST':
-#         # create a form instance and populate it with data from the request:
-#         form = CommentForm(request.POST)
-#         # check whether it's valid:
-#         if form.is_valid():
-#             # process the data in form.cleaned_data as required
-#             # ...
-#             # redirect to a new URL:
-#             form.save()
-
-#     # if a GET (or any other method) we'll create a blank form
-#     else:
-#         form = CommentForm()
-
-#     return render(request, 'form.html', {'form': form})
-
+class ThanksView(generic.ListView):
+    template_name = 'portfolio/thanks.html'
+    model = Comment
+    def get_queryset(self):
+        """
+        Return the last five published comments (not including those set to be
+        published in the future).
+        """
+        return Comment
 
 # class ContactView(FormView):
 #     template_name = 'portfolio/contact.html'
