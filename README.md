@@ -33,7 +33,7 @@
  ### Step 1:
  Make sure you are in the right directory.
     
-    cd django-polls
+    cd myPortfolio
 
  ### Step 2:
  To run the server type the following command in the terminal.
