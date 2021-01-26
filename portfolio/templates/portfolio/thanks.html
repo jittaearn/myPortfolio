@@ -1,16 +1,20 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'portfolio/contact.css' %}">
+<link rel="stylesheet" href="{% static 'portfolio/thanks.css' %}">
 
 <div class="container p-4">
     <div class="col pt-3">
         <div class="row">
-            <h1>Thank you for your comment</h1>
             <div class="col pt-3">
-            <button type="button" class="btn btn-dark">
-                <a class="nav-link" href="{% url 'portfolio:index' %}">Return to Home Page</a>
-            </button>
+                <img src="{% static 'portfolio/thanks.jpg' %}" alt="thank you picture">
+            </div>
+            <div class="col-8 pt-3">
+                <h1>Thank you for</h1>
+                <h1>your comment!!</h1>
+                <button type="button" class="btn btn-dark mt-5">
+                    <a class="nav-link" href="{% url 'portfolio:index' %}">Return to Home Page</a>
+                </button>
             </div>
         </div>
     </div>

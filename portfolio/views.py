@@ -25,8 +25,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """
-        Return the last five published questions (not including those set to be
-        published in the future).
+        Redirect to the home page
         """
         return Comment
 
@@ -35,8 +34,7 @@ class ExperienceView(generic.ListView):
     model = Comment
     def get_queryset(self):
         """
-        Return the last five published comments (not including those set to be
-        published in the future).
+        Redirect to the experience page
         """
         return Comment
 
@@ -46,8 +44,7 @@ class ExtraCurriculumView(generic.ListView):
     model = Comment
     def get_queryset(self):
         """
-        Return the last five published comments (not including those set to be
-        published in the future).
+        Redirect to the extra curriculum page
         """
         return Comment
 
@@ -56,6 +53,9 @@ class ContactView(FormView):
     form_class = CommentForm
         
     def post(self, request, *args, **kwargs):
+        """
+        Redirect to the contact page with a form 
+        """
         print("Post") 
         form = self.form_class(request.POST) 
         if form.is_valid():
