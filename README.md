@@ -6,7 +6,6 @@
 
  The application requires
  * Python 3.6.6 or newer
- * Python add-on modules as in [requirements.txt](requirements.txt)
 
  ## Installation
  ### Step 1:
